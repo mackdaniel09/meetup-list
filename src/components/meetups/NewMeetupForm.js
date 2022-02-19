@@ -19,11 +19,12 @@ function NewMeetupForm(props) {
     const meetupData = {
       title: entertedTitle,
       image: entertedImage,
-      image: entertedAddress,
+      address: entertedAddress,
       description: entertedDescription,
     };
 
     props.onAddMeetup(meetupData);
+    // console.log(meetupData);
   }
 
   return (
@@ -35,7 +36,7 @@ function NewMeetupForm(props) {
         </div>
         <div className={classes.control}>
           <label htmlFor="image">Meetup Image</label>
-          <input type="url" required id="image" ref={imageInputRef} />
+          <input type="file" required id="image" ref={imageInputRef} />
         </div>
         <div className={classes.control}>
           <label htmlFor="address">Adress</label>
@@ -51,7 +52,7 @@ function NewMeetupForm(props) {
           />
         </div>
         <div className={classes.actions}>
-          <button>Add Meetup</button>
+          <button>Add New Meetup</button>
         </div>
       </form>
     </Card>
